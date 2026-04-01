@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   const { origem, campanha, pagina } = req.body;
 
   try {
-    await fetch("https://hook.us2.make.com/SEU_WEBHOOK_AQUI", {
+    await fetch("https://hook.us2.make.com/6okabri5bp7ap2h61x458n4stfe2yvqc, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
