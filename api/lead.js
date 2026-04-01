@@ -5,9 +5,17 @@ export default async function handler(req, res) {
 
   const { origem, campanha, pagina } = req.body;
 
-  return res.status(200).json({
-    origem,
-    campanha,
-    pagina
+  await fetch("https://hook.us2.make.com/SEU_WEBHOOK_AQUI", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      origem,
+      campanha,
+      pagina
+    })
   });
+
+  return res.status(200).json({ success: true });
 }
